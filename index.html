@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+		<meta name="author" content="">
+		<title>Customized Form</title>
+
+        
+		<!-- Styles -->
+        <link rel="stylesheet" href="css/checkbox_radio_img_sprite.css">
+        <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css">
+        <link rel="stylesheet" href="lib/fontawesome/fa-svg-with-js.css">
+        <link rel="stylesheet" href="lib/fontawesome/googleapifont.css">
+        <link rel="stylesheet" href="css/style.css">
+        <!-- lib -->
+        <script src="lib/jquery/jquery-3.3.1.js"></script>
+        <script src="lib/bootstrap/tether.min.js"></script>
+        <script src="lib/bootstrap/bootstrap.min.js"></script>
+        <script src="lib/fontawesome/fontawesome-all.js"></script>
+        <script src="lib/fontawesome/fa-v4-shims.js"></script>
+        <!-- js files -->
+
+	</head>
+    
+
+	<body>
+        <div class='faultlessforms-header'><img src='anything' height='150px'><p>HEADER</p></div>
+        <form action="https://faultlessforms.herokuapp.com/submit" method="POST">
+            <div id="myForm">
+                <div class="container" id="customizedform">
+                    
+                </div>
+            </div>
+            <!-- <div class="container" id="submit_button_container">
+                <div class="questionContent">
+                    <button class="submit_button" click="onSubmit">Submit</button>
+                    <span class="ok_description">press <strong>ENTER</strong></span>
+                </div>
+                <br>
+                <br>
+                <br>
+            </div> -->
+        </form>
+        <div class="signature-overlay">
+            <div class="signature-wrapper" style="width:580px">
+                <canvas id="signature-canvas" height="260" width="580"></canvas>
+                <a class="signature-btn close-signature-btn"> x <span data-icon="G"></span></a>
+                <a class="signature-btn clear-signature-btn">Clear</a>
+                <a class="signature-btn add-signature-btn">Done<span style="margin-left: 10px"><i class="fas fa-pencil-alt"></i></span></a>
+                <div class="signature-clearer"></div>
+            </div>
+        </div>
+        <div class='faultlessforms-footer'>FOOTER</div>
+    </body>
+    <script src="lib/signature_pad.js"></script>
+    
+    <script src="js/global.js"></script>
+    <script src="js/main.js"></script>
+
+</html>

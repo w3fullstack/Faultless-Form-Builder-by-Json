@@ -1,0 +1,430 @@
+.faultlessforms-header {
+    display: block;
+    width: 100%;
+    background-color: #4fb0ae;
+    text-align: center;
+    position: fixed;
+}
+.faultlessforms-footer {
+    display: block;
+    width: 100%;
+    height: 300px;
+    background-color: #4fb0ae;
+    text-align: center;
+    vertical-align: middle;
+}
+#myForm {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 100%;
+}
+#myForm::before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 50vh;
+}
+#myForm::after {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 50vh;
+}
+#customizedform {
+    width: 100%;
+    height: 100%;
+}
+#submit_button_container {
+    width: 100%;
+    height: 100%;
+}
+
+.block_group_container {
+    margin: 20px 20px;
+    width: 300px;
+    height: 300px;
+    background-color: antiquewhite;
+    border-radius: 0.25rem;
+}
+
+.question {
+    margin: 20px 0px 50px 0px;
+    width: 100%;
+}
+.title {
+    font-size: 18px;
+    display: inline-block;
+    color: #747474;
+    white-space: pre-wrap;
+    width: calc(100% - 50px);
+}
+.description {
+    font-size: 12px;
+    color: #747474;
+    margin: 10px 0px 0px 50px;
+}
+.questionContent {
+    margin: 30px 0px 0px 50px;
+}
+.questionContent img {
+    margin-bottom: 10px;
+}
+.questionContent input, .questionContent textarea, .question select {
+    color: #4fb0ae;
+    outline: 0;
+    border: 0;
+    border-bottom: 1px solid;
+    background: none;
+    padding: 0 0 10px;
+    width: 100%;
+    font-family: inherit;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 1.25;
+    margin-top: 10px;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.question select.form-control {
+    height: 48px;
+}
+select.form-control:not([size]):not([multiple]) {
+    height: 48px;
+}
+.choice_detail {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.choice_keyboard {
+    background-color: rgba(79, 176, 174, 0.2);
+    color:#4FB0AE;
+    min-width: 20px;
+    height: 20px;
+    font-size: 12px;
+    line-height: 19px;
+    margin-right: 10px;
+    text-align: center;
+    font-weight: 700;
+    border: 1px solid #4FB0AE;
+    border-radius: 2px;
+    padding: 0 3px;
+    display: inline-block;
+    vertical-align: middle;
+    text-transform: capitalize;
+}
+.choice_question {
+    width: 100%;
+    color: #4FB0AE;
+    font-size: 15px;
+    font-family: 'Karla', Helvetica, Arial, sans-serif;
+}
+.choice_check {
+    float: right;
+    color: #4FB0AE;
+    margin-left: 50px;
+}
+.hidden_check {
+    opacity: 0;
+}
+.choice_selected {
+    background-color: rgba(79, 176, 174, 0.2);
+    border-width: 2px;
+}
+.choice_selected .choice_keyboard {
+    background-color: #4FB0AE;
+    color: white;
+}
+
+.hidden {
+    display: none;
+}
+.questionIndex {
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    width: 50px;
+    height: 35px;
+    color: rgb(79, 176, 174);
+}
+
+.validation_error {
+    color: red;
+}
+
+.pressEnter {
+    opacity: 1;
+    visibility: inherit;
+    z-index: 1;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.ok_button, .submit_button {
+    display: inline-block;
+    position: relative;
+    font-family: inherit;
+    background-color: #4FB0AE;
+    fill: rgb(255, 255, 255);
+    color: rgb(255, 255, 255);
+    border-color: #4fb0ae;
+    border: 1px solid;
+    padding: 6px 8px 9px;
+    min-width: 70px;
+    margin: 0;
+    height: 40px;
+    box-shadow: 0 3px 12px 0 rgba(0,0,0,.1);
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+    cursor: pointer;
+
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px;
+}
+.ok_button:hover {
+    background-color:rgba(79,176,174,.6);
+}
+.ok_button:active {
+    background-color:#4fb0ae;
+}
+.ok_description {
+    color: #4FB0AE;
+    font-size: 15px;
+    margin-left: 15px;
+}
+
+.animate {
+    -webkit-transform: translateY(-10px);
+    -moz-transform: translateY(-10px);
+    -ms-transform: translateY(-10px);
+    -o-transform: translateY(-10px);
+    transform: translateY(-10px);
+    -webkit-transition-property: opacity,-webkit-transform;
+    -moz-transition-property: opacity,-moz-transform;
+    -o-transition-property: opacity,-o-transform;
+    transition-property: opacity,transform;
+    -webkit-transition-duration: .1s;
+    -moz-transition-duration: .1s;
+    -o-transition-duration: .1s;
+    transition-duration: .1s;
+    -webkit-transition-timing-function: linear;
+    -moz-transition-timing-function: linear;
+    -o-transition-timing-function: linear;
+    transition-timing-function: linear;
+}
+
+[class^="title description"] > *::selection {
+    background: rgba(79, 176, 174, 0.2);
+}
+
+::selection {
+    background: rgba(79,176,174,.2);
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: red;
+    opacity: 1; /* Firefox */
+}
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: red;
+}
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: red;
+}
+
+.activated {
+    opacity: 1;
+}
+.deactivated {
+    opacity: 0.2;
+}
+
+.auto-text-area{
+    min-height: 20px; /* for default height */
+    overflow: hidden;
+    resize: none;
+    padding: 4px;
+    font-size: 14px;
+    border: 1px solid #000;
+  }
+
+.radio input[type="text"] {
+    padding: 5px 0px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 15px;
+    border: none;
+}
+.radio .other_confirm_button {
+    float: right;
+    color: #4FB0AE;
+    margin-left: 10px;
+    font-size: 25px;
+}
+.other_confirm_button:hover {
+    color: rgba(79,176,174,.6);
+}
+.other_confirm_button:active {
+    color: #4FB0AE;
+}
+
+.required_error {
+    font-size: 14px;
+    line-height: 1;
+    font-weight: 400;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=0);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    padding: 7px 10px;
+    background-color: rgba(153,0,0,.6);
+    color: #fff;
+    text-align: center;
+    /* display: block; */
+    width: 180px;
+}
+
+.address input {
+    margin-top: 0px;
+}
+.address label {
+    margin-bottom: 0px;
+}
+
+.legal_agreement {
+    border: 1px solid #4FB0AE;
+    padding: 20px 20px;
+    text-align: justify;
+    text-justify: inter-word;
+    margin-right: 30px;
+    height: 500px;
+    overflow: scroll;
+}
+
+.form-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -5px;
+    margin-left: -5px;
+}
+
+#signature {
+    border: 1px solid #4FB0AE;
+}
+.signature_result {
+    position: relative;
+    cursor: pointer;
+    text-decoration: underline;
+    background: rgba(253,253,0,0.1);
+    width: 200px;
+    height: 90px;
+    border: 2px dashed #cbd0d5;
+    text-decoration: none;
+}
+.signature_result img {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.signature_result .sign_button {
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    font-family: sans-serif;
+    font-size: 14px;
+    display: flex;
+    text-align: center;
+    padding: 10px 10px;
+    background-color: #eceef1;
+    color: #313440;
+    opacity: 0.8;
+}
+.signature_result .sign_button span {
+    margin-left: 10px;
+}
+
+.signature-overlay.signature-show {
+    display: block;
+}
+.signature-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #eceef1;
+    z-index: 88888888;
+}
+
+.signature-overlay .signature-wrapper {
+    display: block;
+    position: relative;
+    width: 100%;
+    max-width: 580px;
+    margin: 0 auto;
+    top: calc(50% - 134px);
+    background: none;
+}
+.signature-overlay canvas {
+    cursor: pointer;
+    background: #fff;
+    background: url('data:image/gif;base64,R0lGODlhRAIEAaIAAOLi1v7+5enp2ubm2Pf34e7u3QAAAAAAACH5BAAHAP8ALAAAAABEAgQBAAP/GLrc/jDKSau9OOvNu/9gKI5kaZ5oqq5s675wLM90bd94ru987//AoHBILBqPyKRyyWw6n9CodEqtWq/YrHbL7Xq/4LB4TC6bz+i0es1uu9/wuHxOr9vv+Lx+z+/7/4CBgoOEhYaHiImKi4yNjo+QkZKTlJWWl5iZmpucnZ6foKGio6SlpqeoqaqrrK2ur7CxsrO0tba3uLm6u7y9vr/AwcLDxMXGx8jJysvMzc7P0NHS09TV1tfY2drb3N3e3+Dh4uPk5ebn6Onq6+zt7u/w8fLz9PX29/j5+vv8/f7/AAMKHEiwoMGDCBMqXMiwocOHECNKnEixosWLGDNq3Mix/6PHjyBDihxJsqTJkyhTqlzJsqXLlzBjypxJs6bNmzhz6tzJs6fPn0CDCh1KtKjRo0iTKl3KtKnTp1CjSp1KtarVq1izat3KtavXr2DDih1LtqzZs2jTql3Ltq3bt3Djyp1Lt67du3jz6t3Lt6/fv4ADCx5MuLDhw4gTK17MuLHjx5AjS55MubLly5gza97MubPnz6BDix5NurTp06hTq17NurXr17Bjy55Nu7bt27hz697Nu7fv38CDCx9OvLjx48iTK1/OvLnz59CjS59Ovbr169g5CADAnUCE7QAEZE9DgDuAARAKmB+vZoB57w3Ud2dP3rx4BuXn009jHgD8AP/5AVDAfmrIF94C5g1IoBr9eQfefQumYWABBkbIRn/vWbgGeBlqqEaAAnq4BogKingGiNyZiAaG+qk4xoMBoueiGPLJ2OCMYBgIn4EQ4rhFgP8FcKOPWgRYogITEqlFgg/0pyQWD6bHZAMsYuhAlVZSieV6Wm4JwJVeftnllmB6WSaZY2J5ppppVrmmm22y+KaccWbJQJhi3hnmnHYiuGedTgLKpZ5mCpqioXn6WSihaDLKpqNwQkrnC1FGEKiklyraqKaPchqpp5OC2qcCePKZKal/YnqqkKmKumqpiJo6qKuzoroorYeqWiurt9q6qa+dAvupsKESOyqvvyIbrLKKwzJbLAsERDtBtNIaKmuuuCZq7KutbrsrrLpi6624zh4LbrbXalsut72u+2237pJ77rjqzhtvvfDaq2++/LZr75MAByzwwAQXbPDBCCes8MIMN+zwwxBHLPHEFFds8cUYZ6zxxhx37PHHIIcs8sgkl2zyySinrPLKLLfs8sswxyzzzDTXbPPNbiUAADs=') no-repeat;
+    background-size: 100%;
+    zoom: 1;
+    border: 2px solid #cbd0d5;
+    border-top: none;
+    border-left: none;
+}
+.signature-overlay .signature-btn {
+    font-family: sans-serif;
+    position: absolute;
+    padding: 9px;
+    cursor: pointer;
+    font-size: 14px;
+    text-align: center;
+    background: #eceef1;
+    color: #313440;
+    -webkit-appearance: none;
+    border: 2px solid #cbd0d5;
+    border-top: 1px solid #cbd0d5;
+    border-left: 1px solid #cbd0d5;
+    text-transform: uppercase;
+    filter: alpha(opacity=50);
+    opacity: .50;
+    line-height: 100%;
+    border-radius: 3px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+}
+.signature-overlay .signature-btn.close-signature-btn {
+    top: 5px;
+    left: 5px;
+    padding: 9px 14px;
+}
+.signature-overlay .signature-btn.clear-signature-btn {
+    top: 5px;
+    left: 45px;
+}
+.signature-overlay .signature-btn.add-signature-btn {
+    top: 10px;
+    right: 10px;
+
+    filter: alpha(opacity=80);
+    opacity: .80;
+}
+.signature-overlay .signature-clearer {
+    clear: both;
+}
